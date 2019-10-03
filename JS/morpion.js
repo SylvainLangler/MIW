@@ -9,9 +9,14 @@ fonction comptage([E] T: tableau[0..4,0..4] d'entiers) : entier  // retourne le 
 
 tab = [];
 
-tabTestHorizontalWin = [[1,1,1,1,1],[1,1,1,1,1],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
+tabTestHorizontalWin = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[1,1,1,1,1],[1,1,1,1,1]];
 
-tabTestVerticalWin = [[1,0,0,0,0],[1,0,0,0,0],[1,0,0,0,0],[1,0,0,0,0],[1,0,0,0,0]]
+tabTestVerticalWin = [[1,0,0,0,1],[1,0,0,0,1],[1,0,0,0,1],[1,0,0,0,1],[1,0,0,0,1]];
+
+tabTestDiagonalWin = [[1,0,0,0,0],[0,1,0,0,0],[0,0,1,0,0],[0,0,0,1,0],[0,0,0,0,1]];
+tabTestDiagonalWin2 = [[0,0,0,0,1],[0,0,0,1,0],[0,0,1,0,0],[0,1,0,0,0],[1,0,0,0,0]];
+
+test= [[1, 0, 0, 0, 1],[0, 1, 1, 0, 0],[0, 0, 0, 1, 0],[1, 0, 0, 1, 1],[1, 0, 0, 1, 0]];
 
 
 /**
@@ -57,49 +62,94 @@ function remplissage(tab){
 function comptage(tab){
     let nbWin = 0;
     for(let i=0; i<5; i++){
-        nbWin += horizontalWin(tab, i);
-        
-        //nbWin += diagonalWin(tab,i);
         for(let j=0; j<5; j++){
-            nbWin += verticalWin(tab, i, j);
+            if(i<2){
+                nbWin += verticalWin(tab, i, j);
+                nbWin += diagonalWin(tab, i, j);
+            }
+            if(j<2){
+                nbWin += horizontalWin(tab, i, j);
+            }
         }
     }
     return nbWin;
 }
 
-function horizontalWin(tab, i){
+function horizontalWin(tab, i, j){
     let nbWin = 0;
-    if(i < 2){
-        for(j=0; j<2;j++){
-            k = 0;
-            while(tab[i][k] == 1 && k<5){
-                k++;
-                j++;
-            }
-            if(k == 4 || k == 5){
-                nbWin++;
-            }
-        }
+    k = 0;
+    
+    while(tab[i][j] == 1 && j<5){
+        j++;
+        k++;
+    }
+    if(k == 4 || k == 5){
+        nbWin++;
+    }
+
+    if(nbWin >=1){
+        console.log("horizontal win");
     }
     return nbWin;
 }
 
 function verticalWin(tab, i, j){
     let nbWin = 0;
-    if(j < 2){
-        for(i=0; i<2;i++){
-            k = 0;
-            
-            if(k == 4 || k == 5){
-                nbWin++;
-            }
-        }
+    k = 0;
+    while(tab[i][j] == 1 && i<4 ){
+        i++;
+        k++;
+    }
+    if(k == 4 || k == 5){
+        nbWin++;
+    }
+
+    if(nbWin >=1){
+        console.log("vertical win");
     }
     return nbWin;
 }
 
-function diagonalWin(tab,i){
+// Problème diago, il n'arrive pas à dire qu'il y a win si 1,1 -> 2,2 -> 3,3 -> 4,4 idée: refaire un while et en mettant if tab[4,4] == 1 et if tab[4,0] == 1
+function diagonalWin(tab,i,j){
+    let nbWin = 0;
+    if(j > 2 && tab[i][j] == 1){
+        k = 0;
+        for(i;i<4;i++){
+            if((j-1) >= 0){
+                console.log(i,j);
+                if(tab[i+1][j-1] == 1){
+                    k++;
+                }
+                j--;
+            }
+        }
+        if(k == 4 | k == 5){
+            nbWin++;
+        }
+    }
+    else{
+        k = 0;
+        
+        for(i;i<4;i++){
+            if((j+1) < 5){
+                console.log(i,j);
+                if(tab[i+1][j+1] == 1){
+                    k++;
+                }
+                j++;
+            }
+        }
+        console.log("k: "+k);
+        if(k == 4 | k == 5){
+            nbWin++;
+        }
+    }
 
+    if(nbWin >=1){
+        console.log("diago win");
+    }
+    return nbWin;
 }
 
 initialise(tab);
@@ -108,8 +158,8 @@ remplissage(tab);
 
 //console.log(tab);
 //console.log(tabTest);
-console.log(tabTestHorizontalWin);
-console.log(comptage(tabTestHorizontalWin));
+console.log(tabTestDiagonalWin);
+console.log(comptage(tabTestDiagonalWin));
 
 
 

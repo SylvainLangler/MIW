@@ -8,5 +8,5 @@ var reg = new RegExp("^[a-z0-9._-]*@[a-z]*.[a-z]{2,3}","gi");
 //
 tabMatchedMail = stringMails.match(reg);
 
-console.log(tabMatchedMail);
+//console.log(tabMatchedMail);
 
