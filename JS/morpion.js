@@ -1,13 +1,5 @@
 /*
-
-Procédure initialise([E/S] T: tableau[0..4,0..4] d'entiers)   //  permet d'initialiser un tableau 5 lignes , 5 colonnes avec des zéros
-Procédure remplissage([E/S] T: tableau[0..4,0..4] d'entiers)  // permet de mettre 10 fois la valeur 1 de manière aléatoire dans le tableau. On supposera que la fonction alea(n) tire au sort un chiffre entre 0 et n.
-
-fonction comptage([E] T: tableau[0..4,0..4] d'entiers) : entier  // retourne le nombre de fois ou quatre valeurs 1 se suivent ( horizontalement, verticalement ou en diagonale )
-
-*/
-
-tab = [];
+    Tableaux de test pendant le dev
 
 tabTestHorizontalWin = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[1,1,1,1,1],[1,1,1,1,1]];
 
@@ -19,7 +11,7 @@ tabTestDiagonalWin2 = [[0,0,0,0,1],[0,0,0,1,0],[0,0,1,0,0],[0,1,0,0,0],[1,0,0,0,
 testDD2=[[0,1,0,1,0],[0,0,1,0,0],[0,1,0,1,0],[1,0,0,0,1],[0,0,0,0,0]];
 
 
-test= [[1, 0, 0, 0, 1],[0, 1, 1, 0, 0],[0, 0, 0, 1, 0],[1, 0, 0, 1, 1],[1, 0, 0, 1, 0]];
+test= [[1, 0, 0, 0, 1],[0, 1, 1, 0, 0],[0, 0, 0, 1, 0],[1, 0, 0, 1, 1],[1, 0, 0, 1, 0]];*/
 
 
 /**
@@ -151,14 +143,32 @@ function diagonalWin(tab,i,j){
     return nbWin;
 }
 
-initialise(tab);
+function affichageMorpion(tab){
+    document.querySelector(".morpion").innerHTML= "";
+    var html = "<table>";
+    for(let i = 0;i<5;i++){
+        html += "<tr>";
+        for(let j = 0; j<5; j++){
+            html+= "<td>"+tab[i][j]+"</td>";
+        }
+        html += "</tr>";
+    }
+    html +="</table><br>Il y a "+comptage(tab)+" victoire(s)";
+    document.querySelector(".morpion").innerHTML+= html;
+}
 
-remplissage(tab);
 
-//console.log(tab);
-//console.log(tabTest);
-console.log(tabTestDiagonalWin);
-console.log(comptage(tabTestDiagonalWin));
+function play(){
+    tab = [];
+
+    initialise(tab);
+
+    remplissage(tab);
+    
+    comptage(tab);
+    
+    affichageMorpion(tab);
+}
 
 
 
