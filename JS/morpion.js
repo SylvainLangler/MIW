@@ -16,6 +16,9 @@ tabTestVerticalWin = [[1,0,0,0,1],[1,0,0,0,1],[1,0,0,0,1],[1,0,0,0,1],[1,0,0,0,1
 tabTestDiagonalWin = [[1,0,0,0,0],[0,1,0,0,0],[0,0,1,0,0],[0,0,0,1,0],[0,0,0,0,1]];
 tabTestDiagonalWin2 = [[0,0,0,0,1],[0,0,0,1,0],[0,0,1,0,0],[0,1,0,0,0],[1,0,0,0,0]];
 
+testDD2=[[0,1,0,1,0],[0,0,1,0,0],[0,1,0,1,0],[1,0,0,0,1],[0,0,0,0,0]];
+
+
 test= [[1, 0, 0, 0, 1],[0, 1, 1, 0, 0],[0, 0, 0, 1, 0],[1, 0, 0, 1, 1],[1, 0, 0, 1, 0]];
 
 
@@ -79,7 +82,7 @@ function horizontalWin(tab, i, j){
     let nbWin = 0;
     k = 0;
     
-    while(tab[i][j] == 1 && j<5){
+    while(j<5 && tab[i][j] == 1){
         j++;
         k++;
     }
@@ -96,7 +99,7 @@ function horizontalWin(tab, i, j){
 function verticalWin(tab, i, j){
     let nbWin = 0;
     k = 0;
-    while(tab[i][j] == 1 && i<4 ){
+    while(i<5 && tab[i][j] == 1){
         i++;
         k++;
     }
@@ -110,37 +113,33 @@ function verticalWin(tab, i, j){
     return nbWin;
 }
 
-// Problème diago, il n'arrive pas à dire qu'il y a win si 1,1 -> 2,2 -> 3,3 -> 4,4 idée: refaire un while et en mettant if tab[4,4] == 1 et if tab[4,0] == 1
 function diagonalWin(tab,i,j){
     let nbWin = 0;
     if(j > 2 && tab[i][j] == 1){
         k = 0;
-        for(i;i<4;i++){
-            if((j-1) >= 0){
-                console.log(i,j);
-                if(tab[i+1][j-1] == 1){
-                    k++;
-                }
-                j--;
-            }
+        
+        while(i<5 && j>=0 && tab[i][j] == 1){
+            k++;
+            i++;
+            j--;
+        }
+        if(i == 4 && j == 0 && tab[i][j] == 1){
+            k++;
         }
         if(k == 4 | k == 5){
             nbWin++;
         }
     }
-    else{
+    if(j < 2 && tab[i][j] == 1){
         k = 0;
-        
-        for(i;i<4;i++){
-            if((j+1) < 5){
-                console.log(i,j);
-                if(tab[i+1][j+1] == 1){
-                    k++;
-                }
-                j++;
-            }
+        while(i<5 && j<5 && tab[i][j] == 1){
+            k++;
+            i++;
+            j++;
         }
-        console.log("k: "+k);
+        if(i == 4 && j == 4 && tab[i][j] == 1){
+            k++;
+        }
         if(k == 4 | k == 5){
             nbWin++;
         }
