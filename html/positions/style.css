@@ -1,0 +1,42 @@
+
+
+.container div{
+    border:1px solid black;
+    width:400px;
+    height:400px;
+    display:inline-block;
+    margin-right:20px;   
+}
+
+.textes div{
+    width:400px;
+    height:400px;
+    display:inline-block;
+    margin-right:20px;
+}
+
+.pos-static img{
+    position:static;
+}
+
+.pos-relative img{
+    position:relative;
+    top:40px;
+    left:40px;
+}
+
+.pos-absolute img{
+    position:absolute;
+    top:700px;
+    left:200px;
+}
+
+.pos-sticky img{
+    position: -webkit-sticky;
+    position: sticky;
+    top:0px;
+}
+
+.z-index{
+    margin-top:300px;
+}
