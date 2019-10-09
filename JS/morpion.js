@@ -32,6 +32,7 @@ function initialise(tab){
  * 
  * @param tab 
  * remplis le tableau avec 10 1 et le reste de 0
+ * on peut aussi faire, tant que nb1 < 10, i=alea(0,4), j=aléa(0,4), si t[i][j] == 2 alors t[i][j]=1, nb1++
  */
 function remplissage(tab){
     nb1 = 0;
@@ -69,6 +70,57 @@ function comptage(tab){
     }
     return nbWin;
 }
+
+/*function comptageBIS(tab){
+    let nbwin = 0;
+    let s1=0;
+    let s2=0;
+    let s3=0;
+    let s4=0;
+    let s5=0;
+    let s6=0;
+    let s7=0;
+    let s8=0;
+    for(let i=0;i<5;i++){
+        for(let j=0;j<4;j++){
+            s1 += tab[i][j];
+            s2 += tab[i][j+1];
+            s3 += tab[j][i];
+            s4 += tab[j+1][i];
+            if(i == 0){
+                s5 += tab[3-j][i];
+                s6 += tab[j+1][5-j];
+                s7 += tab[4-j][j];
+                s8 += tab[j][4-j];
+            }
+        }
+    }
+    if(s1 == 4){
+        nbwin++;
+    }
+    if(s2 == 4){
+        nbwin++;
+    }
+    if(s3 == 4){
+        nbwin++;
+    }
+    if(s4 == 4){
+        nbwin++;
+    }
+    if(s5 == 4){
+        nbwin++;
+    }
+    if(s6 == 4){
+        nbwin++;
+    }
+    if(s7 == 4){
+        nbwin++;
+    }
+    if(s8 == 4){
+        nbwin++;
+    }
+    return nbwin;
+}*/
 
 function horizontalWin(tab, i, j){
     let nbWin = 0;
@@ -153,7 +205,7 @@ function affichageMorpion(tab){
         }
         html += "</tr>";
     }
-    html +="</table><br>Il y a "+comptage(tab)+" victoire(s)";
+    html +="</table><br>Il y a "+comptageBIS(tab)+" victoire(s)";
     document.querySelector(".morpion").innerHTML+= html;
 }
 
@@ -165,7 +217,7 @@ function play(){
 
     remplissage(tab);
     
-    comptage(tab);
+    comptageBIS(tab);
     
     affichageMorpion(tab);
 }

@@ -53,3 +53,7 @@
     z-index:20;
     position:relative;
 }
+
+.z-index p{
+    margin-top:50px;
+}
