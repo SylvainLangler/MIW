@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="fr"> 
+    <head>
+          <title> CH 1 Exo4 </title>
+		  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />"
+
+    </head>
+    <body>
+	    <script>
+	        // première solution		    
+			window.alert(document.lastModified+"\nDate dernière mise à jour : " + document.lastModified.substring(3,5)+"/"+document.lastModified.substring(0,2)+"/"+document.lastModified.substring(6)+ "\n\n / URL de la page : \n" +  window.location);
+			
+			// autre solution pour récupérer la date de dernière mise à jour.
+
+			let d = new Date(document.lastModified)
+			alert("Date dernière mise à jour : " +d.getDate()+"/"+eval(d.getMonth()+1)+"/"+d.getFullYear())
+        </script>
+    </body>
+
+</html>

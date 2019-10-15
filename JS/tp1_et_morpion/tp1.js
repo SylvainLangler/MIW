@@ -85,5 +85,10 @@ function exercice10(){
 
 function exercice11(){
     let string = prompt("mots séparés par _");
-    alert(string.replace(/_/gi,"/"));
+    //alert(string.replace(/_/gi,"/"));
+    alert(string.split("_").join("/"));
+}
+
+function exercice12(){
+    var reg = /^[12]\s+()$/;
 }

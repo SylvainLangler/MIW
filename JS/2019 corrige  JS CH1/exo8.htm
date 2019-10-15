@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="fr"> >
+    <head>
+          <title> CH 1 Exo8 </title>
+		  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+		<script>
+			var n, p, mes;
+			n=window.prompt("Votre nom :","");
+			p=window.prompt("Votre prénom:","");
+			mes = "Nombre de caractères dans le nom: "+n.length;
+			mes+= "\nNombre de caractères dans le prénom: "+p.length ; // \n permet un saut de ligne
+			mes+= "\nTrois premiers caractères de nom: "+ n.substring(0,3);
+			mes+= "\nTrois derniers caractères du prénom: "+p.substring(p.length-3);// le deuxième paramètre est facultatif
+			window.alert(mes) ;// window est facultatif
+    </script>
+    </body>
+</html>

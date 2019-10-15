@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<html lang="fr"> 
+    <head>
+        <title> CH 1 Exo14</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<script type="text/JavaScript">
+
+			
+		var T=[45, 48, 89, 78];
+		var V=[110, 128, 129, 17];
+		
+		var n = prompt(" Saisiserz le nombre à ajouter en fin du tableau T",100);
+		T.push(n);
+		
+		n = prompt(" Saisiserz le nombre à ajouter en début du tableau T",1);	
+        T.unshift(n);
+		
+		alert(T.join("-"));
+		
+		var Z = T.concat(V);
+		alert(Z.join("-"));	
+
+		 
+		
+		Z.splice(Z.length-2,2) ; // ou Z.pop();Z.pop() ;
+		
+		Z.splice(0,2);	         // ou Z.shift();Z.shift();
+
+		alert(Z.join("/"));	
+		
+		</script>
+
+	</head>
+	<body>
+	</body>
+</html>

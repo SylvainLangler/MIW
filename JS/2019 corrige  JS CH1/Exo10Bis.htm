@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="fr"> 
+    <head>
+        <title> Affichage heure </title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script>	
+		
+			function test(){document.getElementById("Heure").innerHTML= new Date().toLocaleString().split(" ")[2];}
+			onload=function(){setInterval(test,1000)}
+		</script>
+	</head>
+	<body  style='background-color:black;'>
+		<div id="Heure" style='color:white;font-size:200px;position:absolute;top:300px;left:350px'></div>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="fr"> 
+    <head>
+          <title> CH 1 Exo9 </title>
+		  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	</head>
+	<body>
+		<script>
+			alert("ggggsssss".split("-").length-1)
+			var n1,n2;
+			
+			n1=eval(window.prompt("Votre premier nombre:",15.5));  // Attention , il n'y a pas de contrôle de saisie
+			n2=parseFloat(window.prompt("Votre deuxième nombre:",16.3)); // on pouvait aussi multiplier le nombre saisi par 1 pour le transformer en Number
+			
+			mes=n1+"+"+n2+"="+ (n1+n2).toFixed(2);
+			mes+="\nValeur maximale:"+Math.max(n1,n2);
+			mes+="\nEntier supérieur ou égal à "+n1+" : "+Math.ceil(n1);
+			mes+="\nEntier inférieur ou égal à "+n2+" : "+Math.floor(n2);
+			
+			alert(mes);
+
+	</script>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="fr"> 
+    <head>
+        <title> CH 1 Exo13C </title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script>
+		// Cet exercice complète l'exercice 13 et permet de remplacer dans une chaine de caractères les chiffres des N° SS par des étoiles
+		//  var reg = new RegExp ("[12]\\s+(\\d{2}\\s+){3}(\\d{3}\\s+){2}/\\s+\\d{2}", "g");     
+			var reg=/[12]\s+(\d{2}\s+){3}(\d{3}\s+){2}\/\s+\d{2}/g  ;
+			ch =prompt(" Votre chaine ?","Dupont :1 58 08 06 a030 057 / 94 Durand:1 58 08 06 030 057 / 94 Bruno:2 58 08 16 030 057 / 94");
+			ch=ch.replace(reg,"* ** ** ** *** *** / **");
+			alert(ch);
+
+		</script>
+
+	</head>
+
+</body>
+</html>

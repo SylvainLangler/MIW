@@ -1,0 +1,88 @@
+﻿<!doctype html>
+<html lang="fr"> 
+    <head>
+        <title> CH 1 Exo13 </title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<script>
+
+		function exo13A(){
+		var reg=/^[12]\s+(\d{2}\s+){3}(\d{3}\s+){2}\/\s+\d{2}$/ ;
+
+		// Autres possibilités
+
+		//var reg = new RegExp ("^[12]\\s+(\\d{2}\\s+){3}(\\d{3}\\s+){2}/\\s+\\d{2}$", ""); 
+		//var reg=/^(1|2) +(\d{2} +){3}(\d{3} +){2}\/ +\d{2}$/ ;
+
+			var ch=prompt("saisir un numéro de SS:","1 00 10 06 030 057 / 94");
+
+			
+			alert(reg.test(ch)?"le N° de SS est conforme":"le N° de SS n'est pas conforme");
+		
+		}
+		function exo13B(){
+			
+			//var reg = new RegExp ("[12]\\s+(\\d{2}\\s+){3}(\\d{3}\\s+){2}/\\s+\\d{2}", "g");  
+			
+			var reg=/[12]\s+(\d{2}\s+){3}(\d{3}\s+){2}\/\s+\d{2}/g  ;
+			
+			var ch = prompt("votre chaine : ? ","Dupont :1 58 08 06 030 053 / 94  Durand:1 54 a08 06 030 057 / 88 Bruno:2 54 08 16 030 057 / 78");
+
+			console.log(ch.match(reg)?ch.match(reg).join(" : "):"Pas de N° SS Valides");
+
+			
+
+		}
+		
+		function exo13C(){
+			
+		// Cet exercice complète l'exercice 13 et permet de remplacer dans une chaine de caractères les chiffres des N° SS par des étoiles
+		//  var reg = new RegExp ("[12]\\s+(\\d{2}\\s+){3}(\\d{3}\\s+){2}/\\s+\\d{2}", "g");  
+		
+			var reg=/[12]\s+(\d{2}\s+){3}(\d{3}\s+){2}\/\s+\d{2}/g  ;
+			
+			ch =prompt(" Votre chaine ?","Dupont :1 58 08 06 a030 057 / 94 Durand:1 58 08 06 030 057 / 94 Bruno:2 58 08 16 030 057 / 94");
+			
+			ch=ch.replace(reg,"* ** ** ** *** *** / **");
+			
+			alert(ch);
+		}
+		
+		function exo14(){
+		
+			var T=[45, 48, 89, 78];
+			var V=[110, 128, 129, 17];
+			
+			var n = prompt(" Saisisez le nombre à ajouter en fin du tableau T",100);
+			T.push(n);  // ajout en fin de tableau
+			console.log("T : " +T);
+			n = prompt(" Saisisez le nombre à ajouter en début du tableau T",1);	
+			T.unshift(n); // ajout en début de tableau
+			console.log("T : " +T);		
+			alert(T.join("-"));  // Conversion du tableau T en chaine de caractères puis affichage
+			
+			var Z = T.concat(V); // concaténation des tableaux T et V pour donner la tableau Z
+			
+			alert(Z.join("-"));	// Conversion du tableau Z en chaine de caractères puis affichage
+			console.log("Z "+Z);
+			 
+			
+			Z.splice(Z.length-2,2) ; // ou Z.pop();Z.pop() ;   Suppression des deux derniers éléments du tableau Z
+			console.log("Z "+Z);			
+			Z.splice(0,2);	         // ou Z.shift();Z.shift(); Suppression des deux premiers éléments du tableau Z
+			console.log("Z "+Z);
+			alert(Z.join("/"));		// Conversion du tableau Z en chaine de caractères puis affichage	
+			
+		}
+		
+		</script>
+
+			
+	</head>
+	<body>
+		<a href="javascript:exo13A()"> Exo 13.A</a><br/>
+		<a href="javascript:exo13B()"> Exo 13.B</a><br/>
+		<a href="javascript:exo13C()"> Exo 13.C</a><br/>
+		<a href="javascript:exo14()">  Exo 14  </a><br/>
+	</body>
+</html>

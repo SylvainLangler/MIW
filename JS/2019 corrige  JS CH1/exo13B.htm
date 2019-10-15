@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="fr"> 
+    <head>
+        <title> CH 1 Exo13B </title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/JavaScript">
+		// Cet exercice complète l'exercice 13 et permet d'extraire d'une chaine de caractères tous les N° SS
+			
+			//var reg = new RegExp ("[12]\\s+(\\d{2}\\s+){3}(\\d{3}\\s+){2}/\\s+\\d{2}", "g");     
+			var reg=/[12]\s+(\d{2}\s+){3}(\d{3}\s+){2}\/\s+\d{2}/g  ;
+			var ch = prompt("votre chaine : ? ","Dupont :1 58 08 06 030 053 / 94  Durand:1 54 a08 06 030 057 / 88 Bruno:2 54 08 16 030 057 / 78");
+			alert(ch.match(reg).join("          :         "));
+
+
+		</script>
+
+	</head>
+
+</body>
+</html>

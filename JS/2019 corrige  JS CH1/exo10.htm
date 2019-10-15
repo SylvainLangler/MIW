@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr"> 
+    <head>
+        <title> CH 1 Exo10 </title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<script>
+		function test(){
+				   f.document.close();
+				   f.document.write("<b>"+new Date().toLocaleString()+"</b>");			   
+				   setTimeout(test,1000)  ;         
+				   // Il est important de mettre le nom de la fonction entre guillemets s'il y a des paramètres 
+				   // L'écriture: setTimeout(test,1000)  est autorisée si pas de paramètre
+                   // L'écriture setTimeout(test(),1000) pose problème;           
+                   // dans ce cas il y aurait récursivité non contrôlée et plantage                        
+		} 		                                
+		
+		var f=window.open('','','width=300,height=50');
+		
+		test();
+		//setInterval(test,1000);		  Autre possibilité,  dans ce cas il est inutile d'appeler test()  dans la fonction		            
+											                
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>
