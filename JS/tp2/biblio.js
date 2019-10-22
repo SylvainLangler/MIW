@@ -43,6 +43,9 @@ function substitue(c1, c2, chaine){
         }
     }
     return chaine;
+    /* ou
+    return chaine.split(c1).join(c2);
+    */
 }
 
 function surfCarre(c){
@@ -81,5 +84,11 @@ Number.prototype.estNombreEntier =
     }
 ;
 
-test = 54;
-console.log(test.estNombreEntier());
+String.prototype.substitue = 
+    function(c1,c2){
+        return this.split(c1).join(c2);
+    }
+;
+
+
+console.log("bonjour".substitue("o","i"));

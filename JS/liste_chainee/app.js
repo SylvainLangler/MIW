@@ -1,4 +1,4 @@
-var pDebut = new Tpersonne("sylvain");
+var pDebut = null;
 
 function liste(){
     document.getElementById("liste").innerHTML = "";
@@ -11,10 +11,16 @@ function liste(){
 
 function ajout(){
     let nom = prompt("Nom");
-    let newTpersonne = new Tpersonne(nom);
-    newTpersonne.pSuivant = pDebut;
-    pDebut = newTpersonne;
-    liste();
+    if(nom.length < 2 || nom.length > 20){
+        alert("Saisie invalide");
+    }
+    else{
+        nom = nom.substr(0,1).toUpperCase()+nom.substr(1);
+        let newTpersonne = new Tpersonne(nom);
+        newTpersonne.pSuivant = pDebut;
+        pDebut = newTpersonne;
+        liste();
+    }
 }
 
 function supprimer(){
@@ -26,19 +32,23 @@ function supprimer(){
         p = s;
         s = s.pSuivant;
     }
-
-    if(s.nom == nom){
+    if(s != null && s.nom == nom){
         if(s == pDebut){
             pDebut = s.pSuivant;
         }
         else{
             p.pSuivant = s.pSuivant;
         }
-        s = null;
+        delete(s);
         done = true;
     }
     liste();
-    alert(done);
+    if(done){
+        alert("Supression réalisée avec succès");
+    }
+    else{
+        alert("Supression impossible");
+    }
 }
 
 function init(){
