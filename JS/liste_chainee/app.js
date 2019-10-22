@@ -39,7 +39,7 @@ function supprimer(){
         else{
             p.pSuivant = s.pSuivant;
         }
-        delete(s);
+        s = null;
         done = true;
     }
     liste();

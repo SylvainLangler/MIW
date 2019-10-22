@@ -63,16 +63,16 @@ function surfCercle(r){
 function maxi(){
     let max = null;
     if(arguments.length == 0){
-        return null;
+        throw new Error("Function maxi() called without arguments")
     }
     for(let i= 0; i<arguments.length; i++){
-        if(!isNaN(arguments[i])){
+        if(nombre(arguments[i])){
             if(arguments[i] > max){
                 max = arguments[i];
             }
         }
         else{
-            return null;
+            throw new Error("One of the arguments is not a number");
         }
     }
     return max;
@@ -89,6 +89,3 @@ String.prototype.substitue =
         return this.split(c1).join(c2);
     }
 ;
-
-
-console.log("bonjour".substitue("o","i"));

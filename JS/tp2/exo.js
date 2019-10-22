@@ -95,6 +95,30 @@ function exercice9(){
 }
 
 function exercice11(){
+    let prenom = prompt("Prénom");
     
+    let nom = prompt("Nom");
+
+    let date = prompt("Date au format JJ/MM/AAAA");
+
+    let regNom = /[a-zA-Z]+/g;
+
+    let regDate = /[0-9]{2}\/[0-9]{2}\/[0-9]{4}/g;
+
+    let tabJourNum = ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
+
+    if(date.match(regDate) &&  prenom.match(regNom) && nom.match(regNom)){
+
+        let dateEN = date.split("/")[1]+'/'+date.split("/")[0]+'/'+date.split("/")[2];
+
+        let newDate = new Date(dateEN);
+
+        let numJour = newDate.getDay();
+        
+        alert(prenom+" - "+nom+" - "+tabJourNum[numJour]);
+    }
+    else{
+        alert("Erreur de saisie");
+    }
 }
 
