@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+            <textarea name="textarea" placeholder="textarea" id="1"></textarea>
+        <form action="" name="form1" id="form1" method="POST">
+            <textarea name="textarea" placeholder="textarea"></textarea>
+            <input type="text" name="text1" style="display:block;" placeholder="texte"></input>
+        </form>
+        <br>
+        <button name="raz" onclick="raz()">RAZ</button>
+        <button name="longueur" onclick="longueur()">Longueur</button>
+        <br><br>
+        <form action="" name="form2" id="form2" method="POST" onsubmit="return validate()">
+            <label for="nom">Nom:
+                <input type="text" name="nom">
+            </label>
+            <label for="prenom">Prenom:
+                <input type="text" name="prenom">
+            </label>
+            <label for="rue">Rue: 
+                <input type="text" name="rue">
+            </label>
+            <label for="codepostal">Code Postal: 
+                <input type="number" name="codepostal" pattern="[0-9]{5}" value="05000">
+            </label>
+            <label for="ville">Ville: 
+                <input type="text" name="ville">
+            </label>
+            <label for="mail">Mail: 
+                <input type="email" name="email">
+            </label>
+            <label for="tel">Tel: 
+                <input type="tel" name="tel" value="0808080808">
+            </label>
+            <button class="valider" type="submit">Valider</button>
+        </form>
+        <br>
+        <br>
+        <form action="" name="form3" id="form3" method="POST">
+            Euros: <input type="text" name="euros">
+            Francs: <input type="text" name="francs">
+        </form>
+        <br></br>
+        <button name="convertToFrancs" onclick="convertToFrancs()">Convertir en francs</button>
+        <button name="convertToEuros" onclick="convertToEuros()">Convertir en euros</button>
+    </body>
+    <script src="biblio.js"></script>
+    <script src="exo.js"></script>
+</html>
+<style>
+.valider{
+    margin-top:20px;
+}
+
+label{
+    display:block;
+    margin-top:20px;
+}</style>
