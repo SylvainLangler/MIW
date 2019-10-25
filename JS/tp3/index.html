@@ -46,6 +46,17 @@
         <br></br>
         <button name="convertToFrancs" onclick="convertToFrancs()">Convertir en francs</button>
         <button name="convertToEuros" onclick="convertToEuros()">Convertir en euros</button>
+        <nav>
+            <ul>
+                <li onmouseover="toggleColor(this)" onmouseleave="toggleColor(this)">ACCUEIL</li>
+                <li>LIENS</li>
+                <li>LIVRE D'OR</li>
+                <li>E-MAIL</li>
+            </ul>
+        </nav>
+        <form>
+            
+        </form>
     </body>
     <script src="biblio.js"></script>
     <script src="exo.js"></script>
@@ -58,4 +69,14 @@
 label{
     display:block;
     margin-top:20px;
-}</style>
+}
+
+nav ul li{
+    list-style:none;
+}
+
+.hover-blue{
+    background-color:blue;
+}
+
+</style>

@@ -48,3 +48,13 @@ function convertToEuros(){
     }
 }
 
+function toggleColor(element){
+    element.classList.toggle("hover-blue");
+}
+
+/*var tab = [];
+while((a=prompt("test"))){
+    tab.push(a);
+}*/
+
+console.log(tab);
