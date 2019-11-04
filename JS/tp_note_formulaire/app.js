@@ -1,6 +1,6 @@
 let tabProd = {'PC': 1000, 'Imprimante': 80, 'Moniteur': 150, 'Cable': 20, 'Souris': 40, 'Clavier': 50};
 
-remplirSelect(tabProd);
+window.onload = remplirSelect(tabProd);
 
 /**
  * 
@@ -68,5 +68,9 @@ function affMontant(){
 }
 
 function validationCmd(){
-     
+     // ajouter les onclick
+}
+
+function reset(){
+    // ajouter les onclick
 }
