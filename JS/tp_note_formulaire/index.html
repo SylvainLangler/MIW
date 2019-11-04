@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang='FR'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <form action="" name="form" id="form" method="POST" onsubmit="return validate()">
+                <div class="identification">
+                    <legend>Identification</legend>
+                    <label for="nom">Nom: </label>
+                    <input type="text" name="nom" id="nom" size="20">
+
+                    <label for="prenom" id="label-prenom">Prénom: </label>
+                    <input type="text" name="prenom" id="prenom" size="20">
+
+                    <br>
+
+                    <label for="adresse">Adresse: </label>
+                    <input type="text" name="adresse" id="adresse" size="60">
+
+                    <br>
+
+                    <label for="codepostal">Code Postal: </label>
+                    <input type="text" name="codepostal" id="codepostal" pattern="[0-9]{5}">
+
+                    <label for="ville" id="label-ville">Ville: </label>
+                    <input type="text" name="ville" id="ville">
+
+                    <br>
+
+                    <label for="tel">Téléphone</label>
+                    <input type="tel" name="tel" id="tel">
+
+                    <label for="mail" id="label-mail">E-mail</label>
+                    <input type="email" name="mail" id="mail">
+                </div>
+                <br>
+                <div class="selection-produits">
+                    <legend>Selection des produits</legend>
+
+                    <label for="produit"></label>
+                    <select name="produit" id="produit" onChange=affLigne(0)>
+
+                    </select>
+
+                    <label for="prix"></label>
+                    <input type="text" name="prix" id="prix" readonly>
+
+                    <label for="quantite"></label>
+                    <input type="number" name="quantite" id="quantite" readonly>
+
+                    <input type="button" id="p1-plus" value="+" onclick="plus(0)">
+                    <input type="button" id="p1-moins" value="-" onclick="moins(0)">
+                    <input type="button" id="p1-reset" value="x" onclick="sup(0)">
+
+                    <br>
+
+                    <label for="produit"></label>
+                    <select name="produit" id="produit" onChange=affLigne(1)>
+
+                    </select>
+
+                    <label for="prix"></label>
+                    <input type="text" name="prix" id="prix" readonly>
+
+                    <label for="quantite"></label>
+                    <input type="number" name="quantite" id="quantite" readonly>
+
+                    <input type="button" id="p2-plus" value="+" onclick="plus(1)">
+                    <input type="button" id="p2-moins" value="-" onclick="moins(1)">
+                    <input type="button" id="p2-reset" value="x" onclick="sup(1)">
+
+                    <br>
+
+                    <label for="produit"></label>
+                    <select name="produit" id="produit" onChange=affLigne(2)>
+
+                    </select>
+
+                    <label for="prix"></label>
+                    <input type="text" name="prix" id="prix" readonly>
+
+                    <label for="quantite"></label>
+                    <input type="number" name="quantite" id="quantite" readonly>
+
+                    <input type="button" id="p3-plus" value="+" onclick="plus(2)">
+                    <input type="button" id="p3-moins" value="-" onclick="moins(2)">
+                    <input type="button" id="p3-reset" value="x" onclick="sup(2)">
+                </div>
+                <div class="calculs">
+                    <legend>Calculs</legend>
+
+                    <label for="montant-ht">Montant HT</label>
+                    <input type="text" name="montant-ht" id="montant-ht">
+
+                    <br>
+
+                    <label for="montant-tva">Montant TVA (20%)</label>
+                    <input type="text" name="montant-tva" id="montant-tva">
+
+                    <br>
+
+                    <label for="montant-ttc">Montant TTC</label>
+                    <input type="text" name="montant-ttc" id="montant-ttc">
+                </div>
+                <div class="buttons">
+                    <label for="sub"></label>
+                    <input type="submit" id="sub" value="Validation"/>
+    
+                    <label for="reset"></label>
+                    <input type="button" id="reset" value="Reset">
+                </div>
+            </form>
+        </main>
+    </body>
+    <script src="app.js"></script>
+</html>
