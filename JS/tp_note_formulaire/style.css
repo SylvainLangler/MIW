@@ -1,0 +1,50 @@
+legend{
+    margin-top:1.5em;
+    margin-bottom:.5em;
+    font-size:larger;
+}
+
+input{
+    margin:10px;
+    margin-left:0px;
+}
+
+input:read-only{
+    cursor: not-allowed;
+}
+
+form{
+    background-color:#ffc4ad;
+    width:600px;
+    padding:15px;
+    padding-top:5px;
+    border-radius:5px;
+    margin:auto;
+}
+
+.identification label{
+    display:inline-block;
+    width:82px;
+}
+
+.calculs label{
+    display:inline-block;
+    width:140px;
+}
+
+#label-ville, #label-mail, #label-prenom{
+    width:60px;
+    margin-left:17px;
+}
+
+.buttons{
+    margin-top:15px;
+    text-align: center;
+}
+
+.buttons input{
+    margin-right:20px;
+    margin-left:20px;
+    width:80px;
+    height:30px;
+}
