@@ -69,15 +69,18 @@ function affMontant(){
 
 function validationCmd(){
     let ch = "";
-    ch = ch + verifFormRempli() + '\n';
-    //verifCodePostal();
-    //verifNumeTel();
-    //verifEmail();
-    alert(ch);
+    ch = ch + verifFormRempli() + verifCodePostal() + verifNumTel() + verifEmail();
+    if(ch != ""){
+        alert(ch);
+    }
+    else{
+        alert("Formulaire correct");
+    }
 }
 
 function verifFormRempli(){
     let ch = "";
+    // pour chaque élément du formulaire, s'il est vide alors on l'indique
     for(let i = 0; i<document.form.length; i++){
         if(document.form.elements[i].value == ""){
             ch += document.form.elements[i].name+" non rempli\n";
@@ -86,10 +89,44 @@ function verifFormRempli(){
     return ch;
 }
 
+function verifNumTel(){
+    let ch = "";
+    let reg = /^(\d{2}[ -.]?){5}$/;
+    // si le numéro de téléphone n'est pas vide et qu'il ne passe pas le test de la regex, alors on indique l'erreur
+    if(document.getElementById("tel").value != "" && !reg.test(document.getElementById("tel").value)){
+        ch += "Numéro de téléphone invalide\n";
+    }
+    return ch;
+}
+
+function verifCodePostal(){
+    let ch = "";
+    // regex récupérée sur internet, spécifique à la France
+    let reg = /^(?:[0-8]\d|9[0-8])\d{3}$/;
+    // si le code postal n'est pas vide et qu'il ne passe pas le test de la regex, alors on indique l'erreur
+    if(document.getElementById("codepostal").value != "" && !reg.test(document.getElementById("codepostal").value)){
+        ch += "Code postal invalide\n";
+    }
+    return ch;
+}
+
+function verifEmail(){
+    let ch = ""
+    let reg=new RegExp("^[a-z0-9._-]+@[a-z0-9-_]+\.[a-z0-9]{2,4}$","i");
+    // si le mail n'est pas vide et qu'il ne passe pas le test de la regex, alors on indique l'erreur
+    if(document.getElementById("mail").value != "" && !reg.test(document.getElementById('mail').value)){
+        ch += "Email invalide"
+    }
+    return ch;
+}
+
 function resetForm(){
+    // Tableau qui contient les inputs qu'il ne faut pas vider lors du reset
     let tabInputNePasVider = ['p1-plus','p1-moins','p1-reset','p2-plus','p2-moins','p2-reset','p3-plus','p3-moins','p3-reset', 'sub', 'reset'];
+    // pour chaque input, si son nom n'est pas dans le tableau (le if retourne -1), alors on remet à vide la value de l'input
     for(let i = 0; i<document.form.length; i++){
         if((tabInputNePasVider.indexOf(document.form.elements[i].name)) == -1){
+            document.form.elements[i].value = "";
         }
     }
 }
