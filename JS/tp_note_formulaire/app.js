@@ -74,6 +74,8 @@ function affMontant(){
 function validationCmd(){
     let ch = "";
     ch = ch + verifFormRempli() + verifCodePostal() + verifNumTel() + verifEmail();
+    // Si la chaine n'est pas vide, cela veut dire qu'au moins une fonction a renvoyé une chaine non vide, ce qui veut dire qu'il y a au moins une erreur
+    // Si la chaine est vide, alors il n'y a pas d'erreur
     if(ch != ""){
         alert(ch);
     }
