@@ -7,7 +7,7 @@
     </head>
     <body>
         <main>
-            <form action="" name="form" id="form" method="POST" onsubmit="return validate()">
+            <form action="" name="form" id="form" method="POST" onsubmit="return validationCmd()">
                 <div class="identification">
                     <legend>Identification</legend>
                     <label for="nom">Nom: </label>
@@ -52,9 +52,9 @@
                     <label for="quantite"></label>
                     <input type="number" name="quantite" id="quantite" readonly>
 
-                    <input type="button" id="p1-plus" value="+" onclick="plus(0)">
-                    <input type="button" id="p1-moins" value="-" onclick="moins(0)">
-                    <input type="button" id="p1-reset" value="x" onclick="sup(0)">
+                    <input type="button" id="p1-plus" name="p1-plus" value="+" onclick="plus(0)">
+                    <input type="button" id="p1-moins" name="p1-moins" value="-" onclick="moins(0)">
+                    <input type="button" id="p1-reset" name="p1-reset" value="x" onclick="sup(0)">
 
                     <br>
 
@@ -69,9 +69,9 @@
                     <label for="quantite"></label>
                     <input type="number" name="quantite" id="quantite" readonly>
 
-                    <input type="button" id="p2-plus" value="+" onclick="plus(1)">
-                    <input type="button" id="p2-moins" value="-" onclick="moins(1)">
-                    <input type="button" id="p2-reset" value="x" onclick="sup(1)">
+                    <input type="button" id="p2-plus" name="p2-plus" value="+" onclick="plus(1)">
+                    <input type="button" id="p2-moins" name="p2-moins" value="-" onclick="moins(1)">
+                    <input type="button" id="p2-reset" name="p2-reset" value="x" onclick="sup(1)">
 
                     <br>
 
@@ -86,32 +86,32 @@
                     <label for="quantite"></label>
                     <input type="number" name="quantite" id="quantite" readonly>
 
-                    <input type="button" id="p3-plus" value="+" onclick="plus(2)">
-                    <input type="button" id="p3-moins" value="-" onclick="moins(2)">
-                    <input type="button" id="p3-reset" value="x" onclick="sup(2)">
+                    <input type="button" id="p3-plus" name="p3-plus" value="+" onclick="plus(2)">
+                    <input type="button" id="p3-moins" name="p3-moins" value="-" onclick="moins(2)">
+                    <input type="button" id="p3-reset" name="p3-reset" value="x" onclick="sup(2)">
                 </div>
                 <div class="calculs">
                     <legend>Calculs</legend>
 
                     <label for="montant-ht">Montant HT</label>
-                    <input type="text" name="montant-ht" id="montant-ht">
+                    <input type="text" name="montant-ht" id="montant-ht" readonly>
 
                     <br>
 
                     <label for="montant-tva">Montant TVA (20%)</label>
-                    <input type="text" name="montant-tva" id="montant-tva">
+                    <input type="text" name="montant-tva" id="montant-tva" readonly>
 
                     <br>
 
                     <label for="montant-ttc">Montant TTC</label>
-                    <input type="text" name="montant-ttc" id="montant-ttc">
+                    <input type="text" name="montant-ttc" id="montant-ttc" readonly>
                 </div>
                 <div class="buttons">
                     <label for="sub"></label>
-                    <input type="submit" id="sub" value="Validation"/>
+                    <input type="button" id="sub" name="sub" value="Validation" onclick="validationCmd()"/>
     
                     <label for="reset"></label>
-                    <input type="button" id="reset" value="Reset">
+                    <input type="button" id="reset" name="reset" value="Reset" onclick="resetForm()">
                 </div>
             </form>
         </main>

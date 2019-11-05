@@ -68,9 +68,28 @@ function affMontant(){
 }
 
 function validationCmd(){
-     // ajouter les onclick
+    let ch = "";
+    ch = ch + verifFormRempli() + '\n';
+    //verifCodePostal();
+    //verifNumeTel();
+    //verifEmail();
+    alert(ch);
 }
 
-function reset(){
-    // ajouter les onclick
+function verifFormRempli(){
+    let ch = "";
+    for(let i = 0; i<document.form.length; i++){
+        if(document.form.elements[i].value == ""){
+            ch += document.form.elements[i].name+" non rempli\n";
+        }
+    }
+    return ch;
+}
+
+function resetForm(){
+    let tabInputNePasVider = ['p1-plus','p1-moins','p1-reset','p2-plus','p2-moins','p2-reset','p3-plus','p3-moins','p3-reset', 'sub', 'reset'];
+    for(let i = 0; i<document.form.length; i++){
+        if((tabInputNePasVider.indexOf(document.form.elements[i].name)) == -1){
+        }
+    }
 }
