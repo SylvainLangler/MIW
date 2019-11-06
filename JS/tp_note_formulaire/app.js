@@ -1,3 +1,5 @@
+// Tableau associatif au lieu de deux tableaux car d'un point de vue conception c'est étrange d'avoir un tableau 
+// uniquement rempli de produits et un de prix. On ne sait pas quel prix correspond à quel produit, ce n'est pas clair.
 let tabProd = {'PC': 1000, 'Imprimante': 80, 'Moniteur': 150, 'Cable': 20, 'Souris': 40, 'Clavier': 50};
 
 window.onload = remplirSelect(tabProd);
@@ -56,7 +58,9 @@ function sup(n){
 function affMontant(){
     let montantHT = 0;
     let montantTVA = 0;
+    // On parcourt les trois produits
     for(let i =0; i<3; i++){
+        // Si il y a bien un produit choisi on effectue les calculs
         if(document.getElementsByName("produit")[i].value != ""){
             montantHT += (parseInt(document.getElementsByName("prix")[i].value)) * (parseInt(document.getElementsByName("quantite")[i].value));
             montantTVA += (parseInt(document.getElementsByName("prix")[i].value) * 0.2) * (parseInt(document.getElementsByName("quantite")[i].value));
@@ -70,6 +74,8 @@ function affMontant(){
 function validationCmd(){
     let ch = "";
     ch = ch + verifFormRempli() + verifCodePostal() + verifNumTel() + verifEmail();
+    // Si la chaine n'est pas vide, cela veut dire qu'au moins une fonction a renvoyé une chaine non vide, ce qui veut dire qu'il y a au moins une erreur
+    // Si la chaine est vide, alors il n'y a pas d'erreur
     if(ch != ""){
         alert(ch);
     }
