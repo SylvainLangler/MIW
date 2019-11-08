@@ -1,0 +1,7 @@
+3NF:
+si y'a une clé composée:
+Chambre(idHotel, numChambre, surface, nomhotel)
+nomhotel peut être connu qu'avec idHotel donc on supprime et on vérifie bien qu'il y a une table hotel(idHotel, nomHotel)
+
+2NF: vérifier transitivité
+1NF: vérifier les trucs calculés 

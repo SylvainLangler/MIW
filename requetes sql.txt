@@ -1,0 +1,31 @@
+SELECT NomCourse
+FROM Courses
+WHERE CP = '06000'
+ORDER BY NomCourse
+
+SELECT NomCycliste, PreCycliste
+FROM Cycliste
+WHERE NomCycliste lIKE 'PO%DOR'
+
+SELECT NomCycliste, PreCycliste
+FROM Cyclistes NaturalJoin Equipe
+WHERE NomEquipe = "La Française des jeux"
+
+SELECT NomCycliste, PreCycliste
+FROM Cyclistes c 
+JOIN Inscription i on c.NumCycliste = i.NumCycliste
+JOIN Courses co on i.NumCourse = co.NumCourse
+WHERE co.NomCourse = "le Dauphiné libéré"
+
+SELECT count(*) 
+FROM Courses
+WHERE Date BETWEEN '06-01-2019' AND '06-30-2019'
+
+SELECT NomCycliste, PreCycliste, count(i.NumCycliste,i.NumCourse)
+FROM Inscription NaturalJoin Cycliste
+GROUP BY NumCycliste
+
+SELECT NomCycliste, PreCycliste, NumCycliste
+FROM Cyclistes c JOIN Inscription i on c.NumCycliste = i.NumCycliste
+GROUP BY NumCycliste
+HAVING count(i.NumCycliste, i.NumCourse) > 5
