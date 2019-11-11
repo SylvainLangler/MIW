@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premier tp intégration avec M.Lefèvre">
+    <meta name="title" content="Tp1 Intégration">
     <title>MIW - Day 1</title>
 
     <link rel="stylesheet" href="style.css">
@@ -12,26 +14,25 @@
 
         A changer:
 
-        H1 -> Un seul par page
-        Ids -> c'est mieux de mettre des classes ou des balises comme <header> ou <nav>
-        Pour le premier écran d'affichage, pour les performances, bien de mettre les attributs width et height sur les images
-        balises alt sur les images
-        Langue, indentation
-        Pas de lignes vides au début du fichier
-        Mettre des classes et id qui veulent dire quelque chose
-        Meta description même si moins utile pour le référencement
-        Balise Title très importante
-        Balises meta open graph pour les réseaux sociaux
-        attribut title dans les balises a pour faire apparaître un texte en dessous du lien
-        Ancre pour le contact
-
+        H1 -> Un seul par page - OK
+        Ids -> c'est mieux de mettre des classes ou des balises comme <header> ou <nav> - OK
+        Pour le premier écran d'affichage, pour les performances, bien de mettre les attributs width et height sur les images - OK
+        balises alt sur les images - OK
+        Langue, indentation - OK 
+        Pas de lignes vides au début du fichier - OK
+        Mettre des classes et id qui veulent dire quelque chose - OK 
+        Meta description même si moins utile pour le référencement - OK
+        Balise Title très importante - OK
+        Balises meta open graph pour les réseaux sociaux - Pas important pour cette fois mais à se rappeler
+        attribut title dans les balises a pour faire apparaître un texte en dessous du lien - Pas indispensable mais intéressant
+        Ancre pour le contact - OK
 
         Form:
-        tous les champs sont requis -> étoile / required
-        attribut for dans les labels
-        attributs name et id
-        placeholder
-        input type email
+        tous les champs sont requis -> étoile / required - OK
+        attribut for dans les labels - OK
+        attributs name et id - OK
+        placeholder - Intéressant à utiliser dans certains cas, ou si il remplace le label
+        input type email - OK
 
 	-->
 </head>
@@ -46,7 +47,7 @@
                         <a href="#">Accueil</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -55,7 +56,7 @@
         <div class="region-top">
             <div class="article-left">
                 <article>
-                    <img src="img/mm-guide-be-there-hp-hero.jpg" width="303" height="260" class="img-article1" >
+                    <img src="img/mm-guide-be-there-hp-hero.jpg" width="634" height="544" class="img-article1" alt="illustration de l'article 1">
                     <div>
                         <h1 class="titre-premier-article">
                             <a href="#">Titre de l'article 11 </a>
@@ -67,11 +68,11 @@
             
             <div class="article-right">
                 <article>
-                    <img src="img/winning-omni-channel-shoppers-micro-moments-bn.jpg" width="200">
+                    <img src="img/winning-omni-channel-shoppers-micro-moments-bn.jpg" width="326" height="183" alt="femme traversant un passage piéton">
                     <div>
-                        <h1 class="titre-article">
+                        <h2 class="titre-article petit-titre">
                             <a href="#">Video Micro-Moments: What Do They Mean for Your Video Strategy?</a>
-                        </h1>
+                        </h2>
                         <ul class="tags">
                             <li>
                                 <a href="#">Vidéo</a>
@@ -81,11 +82,11 @@
                 </article>
 
                 <article>
-                    <img src="img/video-micro-moments-what-do-they-mean-for-your-video-strategy-lg.jpg" width="200">
+                    <img src="img/video-micro-moments-what-do-they-mean-for-your-video-strategy-lg.jpg" width="326" height="183" alt="femme se maquillant"> 
                     <div>
-                        <h1 class="titre-article">
+                        <h2 class="titre-article petit-titre">
                             <a href="#">Winning Omni-Channel Shoppers in Their Micro-Moments</a>
-                        </h1>
+                        </h2>
                         <ul class="tags">
                             <li>
                                 <a href="#">Mobile</a>
@@ -95,78 +96,78 @@
                 </article>
             </div>
         </div>
-        <!--
-        <div id="region-main">
+        <div class="region-main">
             <article>
-                <img src="img/mm_betterstrategy_454x255.png" />
+                <img src="img/mm_betterstrategy_454x255.png" width="200" height="112" alt="illustration better strategy"/>
                 <div>
-                    <h1>Titre de l'article</h1>
+                    <h2 class="h1-like">Titre de l'article</h2>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <!-- je ne sais pas ce que c'est, comme je ne sais pas comment cela est censé s'afficher car il ne s'affiche pas sur votre codepen, 
+                        surement par soucis de css je l'enlève
+                    
                     <ul class="tags">
                         <li>
                             <a href="#">Vidéo</a>
                         </li>
                     </ul>
+                    -->
                 </div>
             </article>
             <article>
-                <img src="img/micro-moments-shopper-journey-report-harvard-business-review-1-sm.jpg" />
+                <img src="img/micro-moments-shopper-journey-report-harvard-business-review-1-sm.jpg" width="200" height="112" alt="illustration statistiques"/>
                 <div>
-                    <h1>Titre de l'article</h1>
+                    <h2 class="h1-like">Titre de l'article</h2>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <!--
                     <ul class="tags">
                         <li>
-                            <a href="#" 
-                               "vidéo article">Vidéo</a>
+                            <a href="#" "vidéo article">Vidéo</a>
                         </li>
                     </ul>
+                    -->
                 </div>
             </article>
             <article>
-                <img src="img/how-moms-use-youtube-videos-new-trends-and-insights-sm-1.jpg" />
+                <img src="img/how-moms-use-youtube-videos-new-trends-and-insights-sm-1.jpg" width="200" height="112" alt="illustration utilisation de youtube"/>
                 <div>
-                    <h1>Titre de l'article</h1>
+                    <h2 class="h1-like">Titre de l'article</h2>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <!--
                     <ul class="tags">
                         <li>
                             <a href="#">Vidéo</a>
                         </li>
                     </ul>
+                    -->
                 </div>
             </article>
         </div>
 
-        <div id="region-sidebar">
+        <div class="region-sidebar" id="contact">
 
-            <h1>Contactez-nous</h1>
+            <h4>Contactez-nous</h4><p class="info-champs-requis">* champ requis</p>
 
-            <form action="#" >
-                <label>Nom :</label>
-                <input type="text" />
-                <br />
+            <form action="#" name="form" id="form1">
+                <label for="name">Nom<span>*</span> :</label>
+                <input type="text" id="name" name="name" required/>
 
-                <label>Prénom :</label>
-                <input type="text" />
-
-                <br />
-                <label>Société :</label>
-                <input type="text" />
-
-                <br />
-                <label>Téléphone :</label>
-                <input type="text" />
-
-                <br />
-                <label>Email :</label>
-                <input type="text" />
-
-                <br />
+                <label for="surname">Prénom<span>*</span> :</label>
+                <input type="text" id="surname" name="surname" required/>
+                
+                <label for="societe">Société<span>*</span> :</label>
+                <input type="text" id="societe" name="societe" required/>
+                
+                <label for="tel">Téléphone<span>*</span> :</label>
+                <input type="text" id="tel" name="tel" required/>
+                
+                <label for="email">Email<span>*</span> :</label>
+                <input type="email" id="email" name="email" required/>
+                
                 <input type="submit" value="Envoyer" />
-
             </form>
         </div>
         <footer>
-        </footer>-->
+        </footer>
     </div>
 </body>
 

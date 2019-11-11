@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -11,8 +15,20 @@ body {
     line-height: 1.6;
 }
 
+.petit-titre{
+    color: white;
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.h1-like{
+    margin:0;
+    font-size:1.5em;
+}
+
 img{
     width:100%;
+    height:auto;
 }
 
 header {
@@ -64,12 +80,15 @@ header nav a:hover {
     text-align: center;
 }
 
-.article-left img{
-    height:auto;
+.article-left div{
+    background-color: #ff7043;
+    color:white;
+    padding: 1px;
+    margin-top: -7px;
 }
 
-.titre-premier-article a{
-    color:black !important;
+.article-left img{
+    height:auto;
 }
 
 .titre-article a{
@@ -77,17 +96,11 @@ header nav a:hover {
     color: white;
 }
 
-.article-right article{
+article{
     text-align:center;
 
 }
 
-
-.region-top .article-right article h1 {
-    color: white;
-    font-size: 0.9em;
-    margin: 0;
-}
 
 .region-top .article-right article:nth-child(1) {
     background-color: #c62828;
@@ -115,30 +128,78 @@ ul.tags li a {
     font-size: 0.9em;
     border: 1px solid black;
     background-color: black;
-    padding: 10px 50px;
+    padding: 15px 50px;
     border-radius: 5px;
 }
 
-@media screen and (min-width:960px){
-    body{
-        color:#424242;
-    }
-    .container {
-        width: 960px;
-        margin: auto;
-    }
-    .img-article1{
-        width:634px !important;
-    }
-    .region-top {
-        height: 544px;
-        overflow: hidden;
-    }
-
-    .region-top .article-left div{
-        bottom:40px !important;
-    }
+.region-main article .tags a {
+    text-decoration: none;
+    color: white;
 }
+
+.region-sidebar span{
+    color:red;
+}
+
+.info-champs-requis{
+    text-align:center;
+    color:red;
+    margin:0;
+    font-size:20px;
+}
+
+.region-sidebar h4 {
+    text-align:center;
+    font-size:1.3em;
+    margin-top: 45px;
+}
+
+.region-sidebar label {
+    width: 100px;
+    display: inline-block;
+}
+
+.region-sidebar input[type=submit] {
+    background-color: #5677fc;
+    border-radius: 2px;
+    font-weight: 500;
+    padding: 1em;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    color: white;
+    margin: 2em auto 0 9px;
+    display: block;
+    font-size: 0.9em;
+}
+
+form{
+    margin-bottom:20px;
+    padding:2em;
+}
+
+input{
+    width: 100%;
+    display: block;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+.submit{
+    text-align:center;
+    margin:0 auto;
+}
+
+label{
+    width:100%;
+    display:block;
+}
+
+footer{
+    background-color: black;
+    height: 50px;
+}
+
+
 
 @media screen and (min-width:480px){
     header nav li{
@@ -165,6 +226,10 @@ ul.tags li a {
         text-align:initial;
     }
 
+    article{
+        text-align:initial;
+    }
+
     .titre-premier-article a{
         color:white !important;
     }
@@ -183,7 +248,6 @@ ul.tags li a {
     }
     .region-top .article-right {
         width: 34%;
-        background: green;
         float: right;
     }
     
@@ -208,77 +272,113 @@ ul.tags li a {
     ul.tags li a{
         border:none;
         background-color:transparent;
+        padding:0;
+        border-radius:0;
+    }
+
+    .article-right article{
+        text-align:initial;
+    }
+
+    .region-main {
+        clear: both;
+        margin-top: 2em;
+        float: left;
+        width: 66%;
+    }
+    
+    .region-main article {
+        height: 120px;
+        overflow: hidden;
+        margin-bottom: 2em;
+    }
+    
+    .region-main article .tags a{
+        color: #1875d1;
+    }
+    
+    .region-main article img {
+        float: left;
+        margin-right: 30px;
+        width: 200px;
+    }
+    
+    
+    .region-main article h1 {
+        margin: 0;
+    }
+    
+    .region-main article p {
+        margin: 0;
+    }
+
+    .region-sidebar input[type="submit"]{
+        margin: 1em auto 0 auto;
+        padding: .45em .938em .5em;
+    }
+
+    .region-sidebar h4{
+        font-size:1em;
+        text-align:initial;
+        margin-top:initial;
+    }
+
+    form{
+        margin:0;
+        padding:0;
+        text-align:initial;
+    }
+    
+    input{
+       display:inline-block; 
+       padding:0;
+       margin:0;
+       width:auto;
+    }
+
+    label{
+       width: 100px;
+        display: inline-block;
+    }
+
+    .info-champs-requis{
+        text-align:initial;
+        margin:initial;
+        font-size:initial;
+    }
+
+    .region-sidebar {
+        float: right;
+        width: 34%;
+        background-color: #f5f5f5;
+        padding: 2em;
+        box-sizing: border-box;
+        height: 490px;
+        color: #666;
+    }
+
+    footer {
+        clear: both;
     }
 }
 
-/*
+@media screen and (min-width:960px){
+    body{
+        color:#424242;
+    }
+    .container {
+        width: 960px;
+        margin: auto;
+    }
+    .img-article1{
+        width:634px !important;
+    }
+    .region-top {
+        height: 544px;
+        overflow: hidden;
+    }
 
-#region-main {
-    clear: both;
-    margin-top: 2em;
-    float: left;
-    width: 66%;
+    .region-top .article-left div{
+        bottom:40px !important;
+    }
 }
-
-#region-main article {
-    height: 120px;
-    overflow: hidden;
-    margin-bottom: 2em;
-}
-
-#region-main article img {
-    float: left;
-    margin-right: 30px;
-    width: 200px;
-}
-
-#region-main article h1 {
-    margin: 0;
-}
-
-#region-main article p {
-    margin: 0;
-}
-
-#region-main article .tags a {
-    text-decoration: none;
-    color: #1875d1;
-}
-
-#region-sidebar {
-    float: right;
-    width: 34%;
-    background-color: #f5f5f5;
-    padding: 2em;
-    box-sizing: border-box;
-    height: 490px;
-    color: #666;
-}
-
-#region-sidebar h1 {
-    font-size: 1em;
-}
-
-#region-sidebar label {
-    width: 100px;
-    display: inline-block;
-}
-
-#region-sidebar input[type=submit] {
-    background-color: #5677fc;
-    border-radius: 2px;
-    font-weight: 500;
-    padding: .45em .938em .5em;
-    text-transform: uppercase;
-    border: 1px solid transparent;
-    color: white;
-    margin: 1em auto 0 auto;
-    display: block;
-    font-size: 0.9em;
-}
-
-footer {
-    clear: both;
-    background-color: black;
-    height: 50px;
-}*/
