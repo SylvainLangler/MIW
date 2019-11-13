@@ -1,0 +1,43 @@
+reset
+commentaires css
+
+télécharger les images/css/js/librairies en local
+
+dns: 8.8.8.8 google, 1.1.1.1 cloudFare
+changer dns pour améliorer vitesse
+chargement page
+
+images: planches d'icones sur photoshop, comme ça 
+on appelle qu'un fichier
+
+définir une font d'icones, une lettre = une icone
+font face
+a.icon::before{
+font-family: 'icones"
+
+a.icon::before{
+content:"a";
+
+flaticon, que des icones en noir et blanc
+
+icone search -> hover
+icone trois points 
+-> ne fait rien
+
+hover partout sauf barre 
+réseaux sociaux: icones + liens
+hover -> effet, label sort
+
+pas d'ombres sur les côtés
+
+1 seul fichier css
+2 images (le reste en background j'imagine?)
+icones -> soit font, soit sprite svg (pas png)
+
+mettre plusieurs fontfamily 
+
+performance: 100
+accessibility >= 95
+Best practices > 93
+SEO = 100
+W3C : No Errors
