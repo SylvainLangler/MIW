@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='FR'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body>
+        <main>
+            <form name="form" id="form" action="">
+                <select name="ville" id="ville" onChange=afficheInfos()>
+
+                </select>
+                <div>
+                    <label for="tmax">Température maximale</label>
+                    <input type="text" name="tmax" id="tmax">
+                </div>
+                <div>
+                    <label for="tmin">Température minimale</label>
+                    <input type="text" name="tmin" id="tmin">
+                </div>
+                <div>
+                    <label for="tmoy">Température moyenne</label>
+                    <input type="text" name="tmoy" id="tmoy">
+                </div>
+            </form>
+        </main>
+    </body>
+    <script src="app.js"></script>
+</html>
+<style>
+form div{
+    margin:40px;
+    margin-left:65px;
+}
+</style>

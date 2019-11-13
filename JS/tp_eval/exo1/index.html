@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='FR'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body>
+        <main>
+            <form name="form" id="form" action="">
+                <label for="isbn">ISBN-13: </label>
+                <input type="text" name="isbn" id="isbn">
+                <br>
+                <input type="button" id="sub" name="sub" value="OK" onclick="test(this.form)"/>
+                <div id="reponse">
+                    
+                </div>
+            </form>
+        </main>
+    </body>
+    <script src="app.js"></script>
+</html>
+<style>
+input[type="button"]{
+    margin-top:20px;
+    width:100px;
+}
+
+#reponse{
+    display:inline-block;
+}
+</style>

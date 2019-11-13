@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='FR'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body>
+        <main>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Devise</th>
+                        <th>Montant</th>
+                        <th>Cours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Euro</td>
+                        <td><input type="text" name="convert" id="euro" onChange="convert(this)"></td>
+                        <td>1 Euro = 1 Euro</td>
+                    </tr>
+                    <tr>
+                        <td>USD Dollar Américain</td>
+                        <td><input type="text" name="convert" id="USD" onChange="convert(this)"></td>
+                        <td>1 Euro = 1.2693 USD</td>
+                    </tr>
+                    <tr>
+                        <td>FRF France</td>
+                        <td><input type="text" name="convert" id="franc" onChange="convert(this)"></td>
+                        <td>1 Euro = 6.55957</td>
+                    </tr>
+                    <tr>
+                        <td>AUD Dollar Australien</td>
+                        <td><input type="text" name="convert" id="AUD" onChange="convert(this)"></td>
+                        <td>1 Euro = 1.443 AUD</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </body>
+    <script src="app.js"></script>
+</html>
+<style>
+thead tr th{
+    width:150px
+}
+</style>
