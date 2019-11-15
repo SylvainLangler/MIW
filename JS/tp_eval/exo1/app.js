@@ -1,3 +1,5 @@
+window.onload = display(100,200);
+
 // Regex ISBN-13
 let Reg = {
     isbn: /(978|979)-\d-\d{5}-\d{3}-\d/
@@ -73,6 +75,12 @@ function test(form){
     }
 
     // On affiche dans la div réponse, le message à montrer
+    document.getElementById("reponse").style.display = 'inline-block';
     document.getElementById("reponse").innerHTML = reponse;
     
+}
+
+function display(x,y){
+    document.getElementById('form').style.left = x+'px';
+    document.getElementById('form').style.top = y+'px';
 }
