@@ -10,6 +10,7 @@
 
 body{
     color:white;
+    font-family: monospace;
 }
 
 ul{
@@ -23,6 +24,7 @@ a{
 
 a:hover{
     color:white;
+    text-decoration:underline;
 }
 
 /* Header */
@@ -43,7 +45,7 @@ header h1{
 main{
     display:flex;
     width:100%;
-    height:600px;
+    height:530px;
     background-image: url('./img/lauzanne_img.jpg');
     background-size:cover;
     background-position-y: -100px;
@@ -53,25 +55,54 @@ main{
 
 nav{
     position:relative;
-    top:436px;
+    top:32px;
     width:80%;
     margin:0 auto;
     text-align:center;
+    align-self:flex-end;
 }
 
-ul{
-
-}
-
-li{
+nav ul li{
     background-color: rgba(0, 0, 0, 0.85);
     margin:2px;
     font-size:20px;
 }
 
-li a{
+nav ul li a{
     display: inline-block;
     width: 100%;
     padding: 20px 10px;
+}
+
+@media screen and (min-width:768px){
+
+    main{
+        height:465px;
+    }
+
+    nav{
+        top:0;
+    }
+
+    nav ul{
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li{
+        width:33%;
+    }
+}
+
+@media screen and (min-width: 992px){
+    main{
+        height:600px;
+    }
+}
+
+@media screen and (min-width:1200px){
+    main{
+        background-position-y: -300px;
+    }
 }
 
