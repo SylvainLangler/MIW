@@ -20,11 +20,8 @@ ul{
 a{
     text-decoration: none;
     color:white;
-}
-
-a:hover{
-    color:white;
-    text-decoration:underline;
+    display: inline-block;
+    width: 100%;
 }
 
 /* Header */
@@ -42,6 +39,12 @@ header h1{
     font-size:23px;
 }
 
+i{
+    cursor:pointer;
+}
+
+/* Main */
+
 main{
     display:flex;
     width:100%;
@@ -52,6 +55,8 @@ main{
     background-repeat: no-repeat;
     background-position-x: center;  
 }
+
+/* Nav principale */
 
 nav{
     position:relative;
@@ -68,10 +73,38 @@ nav ul li{
     font-size:20px;
 }
 
+nav ul li:hover{
+    background-color:rgba(0, 0, 0, 0.6);
+    color:black;
+}
+
 nav ul li a{
-    display: inline-block;
-    width: 100%;
-    padding: 20px 10px;
+    padding: 30px 10px;
+}
+
+nav ul li a:hover{
+    text-decoration:underline;
+}
+
+/* Réseaux sociaux */
+
+.reseaux-sociaux{
+    display:none;
+    position:absolute;
+    left:0;
+    top:170px;
+    width:200px;
+    height:500px;
+    background-color:#318cc1;
+}
+
+.reseaux-sociaux ul li{
+    height:83px;
+}
+
+.reseaux-sociaux ul li a{
+    
+    padding: 30px 3px;
 }
 
 @media screen and (min-width:768px){
@@ -102,7 +135,22 @@ nav ul li a{
 
 @media screen and (min-width:1200px){
     main{
-        background-position-y: -300px;
+        background-position-y: -220px;
+    }
+    .reseaux-sociaux{
+        display:flex;
     }
 }
 
+@media screen and (min-width:1600px){
+    main{
+        height:800px;
+        background-position-y:-270px;
+    }
+}
+
+@media screen and (min-width:1920px){
+    main{
+        background-position-y:-400px;
+    }
+}
