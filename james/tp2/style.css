@@ -203,7 +203,6 @@ nav ul li a:hover{
 @media screen and (min-width:1200px){
     main{
         background-position-y: -270px;
-        height:800px;
     }
     .reseaux-sociaux{
         display:flex;
@@ -217,6 +216,9 @@ nav ul li a:hover{
 /* Moyen et grands écrans */
 
 @media screen and (min-width:1600px){
+    main{
+        height:800px;
+    }
 }
 
 @media screen and (min-width:1920px){
