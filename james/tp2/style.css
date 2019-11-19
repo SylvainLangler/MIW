@@ -20,8 +20,6 @@ ul{
 a{
     text-decoration: none;
     color:white;
-    display: inline-block;
-    width: 100%;
 }
 
 /* Header */
@@ -79,6 +77,8 @@ nav ul li:hover{
 }
 
 nav ul li a{
+    display: inline-block;
+    width: 100%;
     padding: 30px 10px;
 }
 
@@ -103,7 +103,8 @@ nav ul li a:hover{
 }
 
 .reseaux-sociaux ul li a{
-    
+    display: inline-block;
+    width: 100%;
     padding: 30px 3px;
 }
 
