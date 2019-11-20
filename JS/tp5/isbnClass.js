@@ -1,19 +1,12 @@
 class Isbn{
 
     Reg = {
-        isbn: /(978|979)-\d-\d{5}-\d{3}-\d/
+        isbn: /^97[89]-\d-\d{5}-\d{3}-\d$/
     }
 
     // isbn conforme: 978-2-86889-006-1
 
     constructor(){
-        
-        /*if(Isbn.count == undefined){
-            Isbn.count = 1;
-        }
-        else{
-            Isbn.count ++;
-        }*/
 
     }  
     
@@ -67,7 +60,7 @@ class Isbn{
         
     }
 
-    display(x,y,index){
+    display(x,y){
 
 
         this.form = document.createElement('form');
