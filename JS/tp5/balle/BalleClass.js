@@ -7,8 +7,8 @@ class BalleClasse{
         this.positionX = positionX;
         this.positionY = positionY;
         this.stopBoolean = false;
-        this.pasX = 1;
-        this.pasY = 1;
+        this.pasX = 4;
+        this.pasY = 4;
     }
 
     display(){
@@ -57,18 +57,18 @@ class BalleClasse{
 
     moveBall(){
         if(!this.stopBoolean){
-            if(this.positionX == window.innerWidth - 50){
+            if(this.positionX >= window.innerWidth - 50){
                 this.pasX = -this.pasX
             }
             else if(this.positionX == 0){
-                this.pasX = 1;
+                this.pasX = 4;
             }
 
-            if(this.positionY == window.innerHeight - 50){
+            if(this.positionY >= window.innerHeight - 50){
                 this.pasY = -this.pasY
             }
             else if(this.positionY == 0){
-                this.pasY = 1;
+                this.pasY = 4;
             }
             
             this.positionX += this.pasX;
