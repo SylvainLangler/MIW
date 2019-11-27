@@ -1,0 +1,235 @@
+@charset "UTF-8";
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: white;
+  font-family: monospace;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Header */
+header {
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.8);
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 5px;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+header h1 {
+  font-size: 23px;
+}
+
+i {
+  cursor: pointer;
+}
+
+.icones-header [class^="flaticon-"]:before, .icones-header [class*=" flaticon-"]:before, .icones-header [class^="flaticon-"]:after, .icones-header [class*=" flaticon-"]:after {
+  font-size: 18px;
+}
+
+[class^="flaticon-"]:before {
+  margin-left: 14px;
+}
+
+.icones-header .temperature, .icones-header .flaticon-sun {
+  display: none;
+}
+
+/* Main */
+main {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 530px;
+  background-image: url("../img/lauzanne_img.jpg");
+  background-size: cover;
+  background-position-y: -100px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+/* Nav principale */
+nav {
+  position: relative;
+  top: 72px;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+nav ul li {
+  background-color: rgba(0, 0, 0, 0.85);
+  margin: 2px;
+  font-size: 20px;
+}
+
+nav ul li:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: black;
+}
+
+nav ul li a {
+  display: inline-block;
+  width: 100%;
+  padding: 30px 10px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Réseaux sociaux */
+.reseaux-sociaux {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 170px;
+  width: 200px;
+  height: 420px;
+}
+
+.reseaux-sociaux ul {
+  position: absolute;
+  right: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.reseaux-sociaux ul li {
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+}
+
+.reseaux-sociaux ul li a {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+  padding: 18px 18px 15px;
+  height: 100%;
+  background-color: #318cc1;
+}
+
+.reseaux-sociaux ul li a span {
+  display: none;
+}
+
+.reseaux-sociaux ul li a:hover span {
+  display: inline-block;
+  font-size: 20px;
+  padding-right: 30px;
+  width: 140px;
+}
+
+.reseaux-sociaux ul li a:hover {
+  background-color: #0c3a4e;
+}
+
+.reseaux-sociaux [class^="flaticon-"]:before {
+  margin-left: 0;
+}
+
+/* Changements en vue TABLETTE */
+@media screen and (min-width: 768px) {
+  header a img {
+    width: 183px;
+    height: 62px;
+  }
+  header h1 {
+    font-size: 36px;
+  }
+  .icones-header .temperature, .icones-header .flaticon-sun {
+    display: initial;
+  }
+  .icones-header .temperature {
+    border-left: 1px solid white;
+    padding-left: 23px;
+    font-size: 22px;
+  }
+  .icones-header [class^="flaticon-"]:before, .icones-header [class*=" flaticon-"]:before, .icones-header [class^="flaticon-"]:after, .icones-header [class*=" flaticon-"]:after {
+    font-size: 28px;
+  }
+  .flaticon-sun {
+    padding-right: 15px;
+  }
+  .flaticon-menu {
+    padding-right: 5px;
+  }
+  main {
+    height: 465px;
+  }
+  nav {
+    top: 0;
+  }
+  nav ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  nav ul li {
+    width: 33%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  main {
+    height: 600px;
+  }
+}
+
+/* Changements pour les écrans d'ordinateur */
+@media screen and (min-width: 1200px) {
+  main {
+    background-position-y: -270px;
+  }
+  .reseaux-sociaux {
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .reseaux-sociaux [class^="flaticon-"]:before, .icones-header [class*=" flaticon-"]:before, .icones-header [class^="flaticon-"]:after, .icones-header [class*=" flaticon-"]:after {
+    font-size: 28px;
+  }
+}
+
+/* Moyen et grands écrans */
+@media screen and (min-width: 1600px) {
+  main {
+    height: 800px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  main {
+    background-position-y: -400px;
+  }
+}
+
+/*# sourceMappingURL=site.css.map */

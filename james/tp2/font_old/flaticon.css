@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 27/11/2019 08:20
+  	Creation date: 17/11/2019 15:00
   	*/
 
 @font-face {
@@ -30,10 +30,12 @@ font-style: normal;
 margin-left: 20px;
 }
 
-.flaticon-behance-network:before { content: "\f100"; }
-.flaticon-twitter:before { content: "\f101"; }
-.flaticon-facebook:before { content: "\f102"; }
-.flaticon-logo:before { content: "\f103"; }
-.flaticon-pinterest:before { content: "\f104"; }
-.flaticon-youtube:before { content: "\f105"; }
-.flaticon-linkedin:before { content: "\f106"; }
+.flaticon-search:before { content: "\f100"; }
+.flaticon-menu:before { content: "\f101"; }
+.flaticon-sun:before { content: "\f102"; }
+.flaticon-facebook:before { content: "\f103"; }
+.flaticon-twitter:before { content: "\f104"; }
+.flaticon-instagram:before { content: "\f105"; }
+.flaticon-pinterest-logo:before { content: "\f106"; }
+.flaticon-youtube:before { content: "\f107"; }
+.flaticon-linkedin-letters:before { content: "\f108"; }
