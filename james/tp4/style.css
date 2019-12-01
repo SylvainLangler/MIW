@@ -8,31 +8,43 @@
   padding:0;
 }
 
+/* Déclaration de la variable --volet-position-top qui détermine à combien de px l'image est affichée en partant du haut */
+
+:root{
+    --volet-position-top:0px;
+}
+
+/* Div jaune */
+
 .volet{
-    margin:30px;
+    margin:10px;
     background-color:#FFEFCA;
-    width:450px;
+    max-width:365px;
     height:500px;
     overflow: hidden;
 }
 
+/* Div ayant pour background l'image du volet */
+
 .img-volet{
     height:100%;
     background-repeat: no-repeat;
-    background-position-y: -460px;
+    background-position-y: var(--volet-position-top);
     background-image: url('img/bg_volet.png')
 }
+
+/* Input type range dont l'orientation est changée */
 
 input[type=range][orient=vertical]
 {
     writing-mode: bt-lr; /* IE */
     -webkit-appearance: slider-vertical; /* WebKit */
     width: 440px;
-    height: 500px;
+    height: 480px;
     transform: rotate(180deg);
     position:absolute;
-    left:40px;
-    top:40px;
+    left:20px;
+    top:30px;
     opacity: 0;
 }
 

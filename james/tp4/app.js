@@ -1,26 +1,26 @@
 function moveBlind(y){
-    let posTop = -460 + y;
-    document.getElementsByClassName('img-volet')[0].style.backgroundPositionY = posTop+'px';
+    // On change la valeur de la variable --volet-position-top avec la valeur entrée en paramètre
+    document.getElementsByClassName('img-volet')[0].style.setProperty('--volet-position-top', y+'px');
 }
 
 function getCursorPosition(value) {
     let y = null;
+
+    // Si le curseur est à 0 ou 100, le volet a une autre forme donc il faut lui donner une hauteur très précise
     if(value == 100){
-        y = -624;
+        y = -1084;
     }
     else if(value == 0){
-        y = -1087;
+        y = -1547;
     }
     else{
-        y = 4.6 * value;
+        // Calcul de la position à attribuer en fonction de la valeur du curseur (qui est entre 0 et 100)
+        y = 4.5 * value - 450;
     }
+
+    // Appel de la fonction qui déplace le volet
     moveBlind(y);    
 }
 
-getCursorPosition(20);
-
-
-
-//document.addEventListener("click", getCursorPosition);
-
-//document.getElementById('slider').oninput(getCursorPosition);
+// Initialise la valeur du curseur à 0 (volet totalement ouvert)
+getCursorPosition(0);
