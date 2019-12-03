@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div class="container">
+            <div class="cas" id="c1-gris">
+                <div class="vert" id="c1-vert">
+                    1er cas
+                </div>
+            </div>
+            <div class="cas" id="c2-gris">
+                <div class="vert" id="c2-vert">
+                    2ème cas
+                </div>
+            </div>
+            <div class="cas" id="c3-gris">
+                <div class="vert" id="c3-vert">
+                    3ème cas
+                </div>
+            </div>
+            <div id="c4gris">
+                <div class="vert" id="c4-vert">
+                    4ème cas
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="app.js"></script>
+</html>
+<style>
+.container{
+    display:flex;
+
+}
+.cas{
+    width:300px;
+    height:300px;
+    background-color:grey;
+    margin-right:50px;
+}
+
+#c4gris{
+    display:block;
+    position:absolute;
+    top:450px;
+    left:100px;
+    width:300px;
+    height:300px;
+    background-color:grey;
+}
+.vert{
+    width:100px;
+    height:100px;
+    background-color:green;
+}
+
+body{
+    background-color:#000000;
+}
+</style>
