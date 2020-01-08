@@ -1,0 +1,14 @@
+body{
+    background-color:#291a1a;
+    color:white;
+}
+
+img{
+    float:left;
+    shape-outside: polygon(0 0, 100px 0, 180px 50%, 100px 100%, 0 100%);
+    clip-path: polygon(0 0, 100px 0, 180px 50%, 100px 100%, 0 100%);
+}
+
+.test{
+    width:400px;
+}
